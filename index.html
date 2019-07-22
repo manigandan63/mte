@@ -1,608 +1,311 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE | Dashboard</title>
-  <!-- Tell the browser to be responsive to screen width -->
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-
-  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
-  <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
-
-</head>
-<body class="hold-transition skin-blue sidebar-mini">
-<div class="wrapper">
-
-  <header class="main-header">
-    <!-- Logo -->
-    <a href="index2.html" class="logo">
-      <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>A</b>LT</span>
-      <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Admin .</b>LTE</span>
-    </a>
-    <!-- Header Navbar: style can be found in header.less -->
-    <nav class="navbar navbar-static-top">
-      <!-- Sidebar toggle button-->
-      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-        <span class="sr-only">Toggle navigation</span>
-      </a>
-
-      <div class="navbar-custom-menu">
-        <ul class="nav navbar-nav">
-          
-          <!-- User Account: style can be found in dropdown.less -->
-          <li class="dropdown user user-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">Alexander Pierce</span>
-            </a>
-            <ul class="dropdown-menu">
-              <!-- User image -->
-              <li class="user-header">
-                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-
-                <p>
-                  Alexander Pierce - Web Developer
-                  <small>Member since Nov. 2012</small>
-                </p>
-              </li>
-              <!-- Menu Body -->
-              <li class="user-body">
-                <div class="row">
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Followers</a>
-                  </div>
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Sales</a>
-                  </div>
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Friends</a>
-                  </div>
-                </div>
-                <!-- /.row -->
-              </li>
-              <!-- Menu Footer-->
-              <li class="user-footer">
-                <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Profile</a>
-                </div>
-                <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
-                </div>
-              </li>
-            </ul>
-          </li>
-
-        </ul>
-      </div>
-    </nav>
-  </header>
-  <aside class="main-sidebar">
-    <section class="sidebar">
-      <ul class="sidebar-menu">
-        
-        <li>
-          <a href="pages/widgets.html">
-            <i class="fa fa-th"></i> <span>Dashboard</span>
-            
-          </a>
-        </li>
-
-        <li>
-          <a href="pages/widgets.html">
-            <i class="fa fa-th"></i> <span>Widgets</span>
-            
-          </a>
-        </li>
-
-        <li><a href="documentation/index.html"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
-        <li class="header">LABELS</li>
-        <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
-        <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
-        <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
-      </ul>
-    </section>
-    <!-- /.sidebar -->
-  </aside>
-
-    <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="">
-      <div class="row">
-        <div class="col-md-12">
-          <ul class="nav nav-tabs nav-cust">
-              <li class="active text-center"><a href="#activity" data-toggle="tab">Activity</a></li>
-              <li><a href="#timeline" data-toggle="tab">Timeline</a></li>
-              <li><a href="#settings" data-toggle="tab">Settings</a></li>
-            </ul>
-        </div>
-      </div>
-      
-    </section>
-
-    <!-- Main content -->
-    <section class="content">
-
-      <div class="row">
-        <div class="tab-content">
-          <section class="col-lg-11 connectedSortable tab-pane active" id="activity">
-            <!-- Chat box -->
-            <div class="box box-success">
-              <div class="box-header">
-                <i class="fa fa-comments-o"></i>
-
-                <h3 class="box-title">Chat</h3>
-
-                <div class="box-tools pull-right" data-toggle="tooltip" title="Status">
-                  <div class="btn-group" data-toggle="btn-toggle">
-                    <button type="button" class="btn btn-default btn-sm active"><i class="fa fa-square text-green"></i>
-                    </button>
-                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-square text-red"></i></button>
-                  </div>
-                </div>
-              </div>
-              <div class="box-body chat" id="chat-box">
-                <!-- chat item -->
-                <div class="item">
-                  <img src="dist/img/user4-128x128.jpg" alt="user image" class="online">
-
-                  <p class="message">
-                    <a href="#" class="name">
-                      <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 2:15</small>
-                      Mike Doe
-                    </a>
-                    I would like to meet you to discuss the latest news about
-                    the arrival of the new theme. They say it is going to be one the
-                    best themes on the market
-                  </p>
-                  <div class="attachment">
-                    <h4>Attachments:</h4>
-
-                    <p class="filename">
-                      Theme-thumbnail-image.jpg
-                    </p>
-
-                    <div class="pull-right">
-                      <button type="button" class="btn btn-primary btn-sm btn-flat">Open</button>
-                    </div>
-                  </div>
-                  <!-- /.attachment -->
-                </div>
-                <!-- /.item -->
-                <!-- chat item -->
-                <div class="item">
-                  <img src="dist/img/user3-128x128.jpg" alt="user image" class="offline">
-
-                  <p class="message">
-                    <a href="#" class="name">
-                      <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 5:15</small>
-                      Alexander Pierce
-                    </a>
-                    I would like to meet you to discuss the latest news about
-                    the arrival of the new theme. They say it is going to be one the
-                    best themes on the market
-                  </p>
-                </div>
-                <!-- /.item -->
-                <!-- chat item -->
-                <div class="item">
-                  <img src="dist/img/user2-160x160.jpg" alt="user image" class="offline">
-
-                  <p class="message">
-                    <a href="#" class="name">
-                      <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 5:30</small>
-                      Susan Doe
-                    </a>
-                    I would like to meet you to discuss the latest news about
-                    the arrival of the new theme. They say it is going to be one the
-                    best themes on the market
-                  </p>
-                </div>
-                <!-- /.item -->
-              </div>
-              <!-- /.chat -->
-              <div class="box-footer">
-                <div class="input-group">
-                  <input class="form-control" placeholder="Type message...">
-
-                  <div class="input-group-btn">
-                    <button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section class="col-lg-11 connectedSortable tab-pane" id="timeline">
-            <!-- Chat box -->
-            <div class="box box-success">
-              <div class="box-header">
-                <i class="fa fa-comments-o"></i>
-
-                <h3 class="box-title">Chat time</h3>
-
-                <div class="box-tools pull-right" data-toggle="tooltip" title="Status">
-                  <div class="btn-group" data-toggle="btn-toggle">
-                    <button type="button" class="btn btn-default btn-sm active"><i class="fa fa-square text-green"></i>
-                    </button>
-                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-square text-red"></i></button>
-                  </div>
-                </div>
-              </div>
-              <div class="box-body chat" id="chat-box">
-                <!-- chat item -->
-                <div class="item">
-                  <img src="dist/img/user4-128x128.jpg" alt="user image" class="online">
-
-                  <p class="message">
-                    <a href="#" class="name">
-                      <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 2:15</small>
-                      Mike Doe
-                    </a>
-                    I would like to meet you to discuss the latest news about
-                    the arrival of the new theme. They say it is going to be one the
-                    best themes on the market
-                  </p>
-                  <div class="attachment">
-                    <h4>Attachments:</h4>
-
-                    <p class="filename">
-                      Theme-thumbnail-image.jpg
-                    </p>
-
-                    <div class="pull-right">
-                      <button type="button" class="btn btn-primary btn-sm btn-flat">Open</button>
-                    </div>
-                  </div>
-                  <!-- /.attachment -->
-                </div>
-                <!-- /.item -->
-                <!-- chat item -->
-                <div class="item">
-                  <img src="dist/img/user3-128x128.jpg" alt="user image" class="offline">
-
-                  <p class="message">
-                    <a href="#" class="name">
-                      <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 5:15</small>
-                      Alexander Pierce
-                    </a>
-                    I would like to meet you to discuss the latest news about
-                    the arrival of the new theme. They say it is going to be one the
-                    best themes on the market
-                  </p>
-                </div>
-                <!-- /.item -->
-                <!-- chat item -->
-                <div class="item">
-                  <img src="dist/img/user2-160x160.jpg" alt="user image" class="offline">
-
-                  <p class="message">
-                    <a href="#" class="name">
-                      <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 5:30</small>
-                      Susan Doe
-                    </a>
-                    I would like to meet you to discuss the latest news about
-                    the arrival of the new theme. They say it is going to be one the
-                    best themes on the market
-                  </p>
-                </div>
-                <!-- /.item -->
-              </div>
-              <!-- /.chat -->
-              <div class="box-footer">
-                <div class="input-group">
-                  <input class="form-control" placeholder="Type message...">
-
-                  <div class="input-group-btn">
-                    <button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section class="col-lg-11 connectedSortable tab-pane" id="settings">
-            <!-- Chat box -->
-            <div class="box box-success">
-              <div class="box-header">
-                <i class="fa fa-comments-o"></i>
-
-                <h3 class="box-title">Chat sett</h3>
-
-                <div class="box-tools pull-right" data-toggle="tooltip" title="Status">
-                  <div class="btn-group" data-toggle="btn-toggle">
-                    <button type="button" class="btn btn-default btn-sm active"><i class="fa fa-square text-green"></i>
-                    </button>
-                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-square text-red"></i></button>
-                  </div>
-                </div>
-              </div>
-              <div class="box-body chat" id="chat-box">
-                <!-- chat item -->
-                <div class="item">
-                  <img src="dist/img/user4-128x128.jpg" alt="user image" class="online">
-
-                  <p class="message">
-                    <a href="#" class="name">
-                      <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 2:15</small>
-                      Mike Doe
-                    </a>
-                    I would like to meet you to discuss the latest news about
-                    the arrival of the new theme. They say it is going to be one the
-                    best themes on the market
-                  </p>
-                  <div class="attachment">
-                    <h4>Attachments:</h4>
-
-                    <p class="filename">
-                      Theme-thumbnail-image.jpg
-                    </p>
-
-                    <div class="pull-right">
-                      <button type="button" class="btn btn-primary btn-sm btn-flat">Open</button>
-                    </div>
-                  </div>
-                  <!-- /.attachment -->
-                </div>
-                <!-- /.item -->
-                <!-- chat item -->
-                <div class="item">
-                  <img src="dist/img/user3-128x128.jpg" alt="user image" class="offline">
-
-                  <p class="message">
-                    <a href="#" class="name">
-                      <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 5:15</small>
-                      Alexander Pierce
-                    </a>
-                    I would like to meet you to discuss the latest news about
-                    the arrival of the new theme. They say it is going to be one the
-                    best themes on the market
-                  </p>
-                </div>
-                <!-- /.item -->
-                <!-- chat item -->
-                <div class="item">
-                  <img src="dist/img/user2-160x160.jpg" alt="user image" class="offline">
-
-                  <p class="message">
-                    <a href="#" class="name">
-                      <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 5:30</small>
-                      Susan Doe
-                    </a>
-                    I would like to meet you to discuss the latest news about
-                    the arrival of the new theme. They say it is going to be one the
-                    best themes on the market
-                  </p>
-                </div>
-                <!-- /.item -->
-              </div>
-              <!-- /.chat -->
-              <div class="box-footer">
-                <div class="input-group">
-                  <input class="form-control" placeholder="Type message...">
-
-                  <div class="input-group-btn">
-                    <button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-      </div>
-      <!-- /.row (main row) -->
-
-    </section>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
-  <footer class="main-footer">
-    <div class="pull-right hidden-xs">
-      <b>Version</b> 2.3.7
-    </div>
-    <strong>Copyright &copy; 2014-2016 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights
-    reserved.
-  </footer>
-
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Create the tabs -->
-    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-      <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-      <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
-    </ul>
-    <!-- Tab panes -->
-    <div class="tab-content">
-      <!-- Home tab content -->
-      <div class="tab-pane" id="control-sidebar-home-tab">
-        <h3 class="control-sidebar-heading">Recent Activity</h3>
-        <ul class="control-sidebar-menu">
-          <li>
-            <a href="javascript:void(0)">
-              <i class="menu-icon fa fa-birthday-cake bg-red"></i>
-
-              <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
-
-                <p>Will be 23 on April 24th</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <i class="menu-icon fa fa-user bg-yellow"></i>
-
-              <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
-
-                <p>New phone +1(800)555-1234</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
-
-              <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
-
-                <p>nora@example.com</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <i class="menu-icon fa fa-file-code-o bg-green"></i>
-
-              <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
-
-                <p>Execution time 5 seconds</p>
-              </div>
-            </a>
-          </li>
-        </ul>
-        <!-- /.control-sidebar-menu -->
-
-        <h3 class="control-sidebar-heading">Tasks Progress</h3>
-        <ul class="control-sidebar-menu">
-          <li>
-            <a href="javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Custom Template Design
-                <span class="label label-danger pull-right">70%</span>
-              </h4>
-
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Update Resume
-                <span class="label label-success pull-right">95%</span>
-              </h4>
-
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-success" style="width: 95%"></div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Laravel Integration
-                <span class="label label-warning pull-right">50%</span>
-              </h4>
-
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Back End Framework
-                <span class="label label-primary pull-right">68%</span>
-              </h4>
-
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
-              </div>
-            </a>
-          </li>
-        </ul>
-        <!-- /.control-sidebar-menu -->
-
-      </div>
-      <!-- /.tab-pane -->
-      <!-- Stats tab content -->
-      <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
-      <!-- /.tab-pane -->
-      <!-- Settings tab content -->
-      <div class="tab-pane" id="control-sidebar-settings-tab">
-        <form method="post">
-          <h3 class="control-sidebar-heading">General Settings</h3>
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Report panel usage
-              <input type="checkbox" class="pull-right" checked>
-            </label>
-
-            <p>
-              Some information about this general settings option
-            </p>
-          </div>
-          <!-- /.form-group -->
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Allow mail redirect
-              <input type="checkbox" class="pull-right" checked>
-            </label>
-
-            <p>
-              Other sets of options are available
-            </p>
-          </div>
-          <!-- /.form-group -->
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Expose author name in posts
-              <input type="checkbox" class="pull-right" checked>
-            </label>
-
-            <p>
-              Allow the user to show his name in blog posts
-            </p>
-          </div>
-          <!-- /.form-group -->
-
-          <h3 class="control-sidebar-heading">Chat Settings</h3>
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Show me as online
-              <input type="checkbox" class="pull-right" checked>
-            </label>
-          </div>
-          <!-- /.form-group -->
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Turn off notifications
-              <input type="checkbox" class="pull-right">
-            </label>
-          </div>
-          <!-- /.form-group -->
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Delete chat history
-              <a href="javascript:void(0)" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
-            </label>
-          </div>
-          <!-- /.form-group -->
-        </form>
-      </div>
-      <!-- /.tab-pane -->
-    </div>
-  </aside>
-
-  <div class="control-sidebar-bg"></div>
-</div>
-
-<script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
-<script src="bootstrap/js/bootstrap.min.js"></script>
-<script src="dist/js/app.min.js"></script>
-
-</body>
-</html>
+		Navigation - Level 0	URL  Navigation - Level 0	Sub Navigation - Level 0	Sub Navigation URL- Level 0	Internal-links-Level 0	External-links-Level 0	Form	PDF-level 0	Command	 Navigation - Level 1	URL  Navigation - Level 1	Sub Navigation - Level 1	Sub  Navigation URL- Level 1	Sub Navigation URL -level2	Sub Navigation URL -level2	Sub Navigation URL -level3	Sub Navigation URL -level3	Sub Navigation -level4	Sub Navigation URL -level4	Sub Navigation -level5	Sub Navigation URL-level5	Internal Links	External Links	PDF	Videos	Forms	Command	
+																													
+External Link	35	Before Login									Post Success Login 																		
+Internal Links	620	Home	https://inventingforlife.msd.co.il/login?ReturnUrl=%2f			1	9	1			Home Page	https://inventingforlife.msd.co.il/											10	4				"A+ Increase all fonts,
+A- Decrease all fonts,
+Logg off function & Showing near(Good afternoon Dr. Beis),
+Menu affix Function used,
+Slider pause option there,
+Search option there,
+4 external linkS error (This link has expired. Please contact the sender of the email for more information.).
+"	
+Videos	895	Privacy Policy	https://inventingforlife.msd.co.il/privacypolicy				1				News	https://inventingforlife.msd.co.il/news											3				1	1 Filter, 1 Search, 2 Pages & Pagination is ther	
+PDF	47	Terms of Service	https://inventingforlife.msd.co.il/termsofservice										News pagination 1	https://inventingforlife.msd.co.il/news?page=1															
+Downloadble Ibooks	12	Accessibility Statement	https://inventingforlife.msd.co.il/accessibility												Scientific event - new treatments in an era of increased resistance to antibiotics	https://inventingforlife.msd.co.il/news/article/39/%D7%90%D7%99%D7%A8%D7%95%D7%A2-%D7%9E%D7%93%D7%A2%D7%99-%D7%98%D7%99%D7%A4%D7%95%D7%9C%D7%99%D7%9D-%D7%97%D7%93%D7%A9%D7%99%D7%9D-%D7%91%D7%A2%D7%99%D7%93%D7%9F-%D7%A9%D7%9C-%D7%A2%D7%9C%D7%99%D7%99%D7%AA-%D7%94%D7%A2%D7%9E%D7%99%D7%93%D7%95%D7%AA							12	2				Pager is there. 2 videos links is there	
+																	Pesudomonas aeruginosa	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=3&tag=2804					1						
+																	Gram Negative Bactria	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=3&tag=2803					1						
+																	Gram Positive Bactria	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=3&tag=2802					1						
+																	ESBL	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=3&tag=2800					1						
+																	Anti-Microbial Stewardship	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=3&tag=2793					1						
+Number of pages	620														Uniqueness and challenges in treating diabetes at the age of three	https://inventingforlife.msd.co.il/news/article/70/%D7%94%D7%99%D7%99%D7%97%D7%95%D7%93%D7%99%D7%95%D7%AA-%D7%95%D7%94%D7%90%D7%AA%D7%92%D7%A8%D7%99%D7%9D-%D7%91%D7%98%D7%99%D7%A4%D7%95%D7%9C-%D7%91%D7%A1%D7%95%D7%9B%D7%A8%D7%AA-%D7%91%D7%92%D7%99%D7%9C-%D7%94%D7%A9%D7%9C%D7%99%D7%A9%D7%99							12	1				Pager is there.  1 video link is there	
+																	real world research	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=3&tag=2847					1						
+																	incretin	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=3&tag=2777					1						
+																	DPP4 inhibitors	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=3&tag=2775					1						
+																	safety	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=3&tag=2769					1						
+																	Kidney	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=3&tag=2765					1						
+Forms	6														Vaccines: 4 myths told by patients and how to deal with them	https://inventingforlife.msd.co.il/news/article/25/%D7%97%D7%99%D7%A1%D7%95%D7%A0%D7%99%D7%9D-4-%D7%9E%D7%99%D7%AA%D7%95%D7%A1%D7%99%D7%9D-%D7%A9%D7%A0%D7%90%D7%9E%D7%A8%D7%99%D7%9D-%D7%A2%D7%9C-%D7%99%D7%93%D7%99-%D7%9E%D7%98%D7%95%D7%A4%D7%9C%D7%99%D7%9D-%D7%95%D7%9B%D7%99%D7%A6%D7%93-%D7%9C%D7%94							12					Pager is there	
+																	Gardasil	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=3&tag=2818					2						
+																	HPV	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=3&tag=2817					2						
+																	Kordilomot 	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=3&tag=2816					2						
+																	cancer of the penis	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=3&tag=2815					2						
+																	 cancer of the mouth and pharynx	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=3&tag=2814					2						
+																	cervical cancer	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=3&tag=2813					2						
+																	HPV	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=3&tag=2812					2						
+																	Vaccines	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=3&tag=2811					2						
+POPUPs	35														support program for MSD Genot patients	https://inventingforlife.msd.co.il/news/article/33/%D7%A0%D7%A2%D7%99%D7%9D-%D7%9C%D7%94%D7%9B%D7%99%D7%A8-%D7%91%D7%A9%D7%91%D7%99%D7%9C-%D7%94%D7%90%D7%99%D7%96%D7%95%D7%9F-%D7%AA%D7%9B%D7%A0%D7%99%D7%AA-%D7%94%D7%AA%D7%9E%D7%99%D7%9B%D7%94-%D7%94%D7%97%D7%93%D7%A9%D7%94-%D7%9C%D7%9E%D7%98							12	1				Pager is there.  1 video link is there	
+																	PSP	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=3&tag=2787					1						
+																	adherence to treatment	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=3&tag=2786					1						
+																	Genut XR Januet	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=3&tag=2768					1						
+																	Januvia Genovia	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=3&tag=2763					1						
+																	sitagliptin 	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=3&tag=2762					1						
+																	Type 2 diabetes	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=3&tag=2761					1						
+Search Facility	Yes														In the follow-up survey conducted by the Geocartography Institute, Zuvali is one of the two leading combined pills in the market	https://inventingforlife.msd.co.il/news/article/38/%D7%91%D7%A1%D7%A7%D7%A8-%D7%9E%D7%A2%D7%A7%D7%91-%D7%94%D7%9E%D7%A8%D7%A9%D7%9E%D7%99%D7%9D-%D7%A9%D7%A2%D7%A8%D7%9A-%D7%9E%D7%9B%D7%95%D7%9F-%D7%92%D7%90%D7%95%D7%A7%D7%A8%D7%98%D7%95%D7%92%D7%A8%D7%A4%D7%99%D7%94-%D7%A0%D7%9E%D7%A6%D7%90-%D7%A9%D7%96%D7%95%D7%90							12	1				Pager is there.  1 video link is there	
+													News pagination 2	https://inventingforlife.msd.co.il/news?page=2														pagination is there.	
+															How to explain to the patient about the different types of vaccinations	https://inventingforlife.msd.co.il/news/article/23/%D7%9B%D7%99%D7%A6%D7%93-%D7%9C%D7%94%D7%A1%D7%91%D7%99%D7%A8-%D7%9C%D7%9E%D7%98%D7%95%D7%A4%D7%9C-%D7%A2%D7%9C-%D7%A1%D7%95%D7%92%D7%99-%D7%94%D7%97%D7%99%D7%A1%D7%95%D7%A0%D7%99%D7%9D-%D7%94%D7%A9%D7%95%D7%A0%D7%99%D7%9D							12	1				Pager is there.  1 video link is there	
+																	Gardasil	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=3&tag=2818					2						
+																	HPV	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=3&tag=2817					2						
+																	Kordilomot	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=3&tag=2816					2						
+																	cancer of the penis	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=3&tag=2815					2						
+																	cancer of the mouth and pharynx	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=3&tag=2814					2						
+																	cervical cancer	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=3&tag=2813					2						
+																	HPV	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=3&tag=2812					2						
+																	Vaccines	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=3&tag=2811					2						
+											Media Publications	https://inventingforlife.msd.co.il/publications											3				1	Filter, Search, Pagination, 5 Pages & pagination is there	
+													News pagination 1	https://inventingforlife.msd.co.il/publications?page=1															
+															Dipeptidyl peptidase-4 inhibitors (DPP4) reduce the risk of atrial fibrillation in patients with type 2 diabetes	https://inventingforlife.msd.co.il/publications/publication/67/%D7%9E%D7%A2%D7%9B%D7%91%D7%99-dpp4-dipeptidyl-peptidase%E2%80%914-%D7%9E%D7%A4%D7%97%D7%99%D7%AA%D7%99%D7%9D-%D7%90%D7%AA-%D7%94%D7%A1%D7%99							11					Filter, Search, Pager is there	
+																	safety	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2769					3						
+																	G'noat XR Januet	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2768					2						
+																	cardiovascular	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2766					4						
+																	G'noat Januet	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2764					2						
+																	sitagliptin Januvia	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2763					2						
+																	sitagliptin	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2762					2						
+																	Type 2 diabetes	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2761					8						
+																	studies "the real world" real world	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2847					4						
+																	incretin	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2777					2						
+																	inhibitors of DPP4	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2775					2						
+															Primary prevention of cardiovascular disease with a Mediterranean diet plus extra virgin olive oil or nuts	https://inventingforlife.msd.co.il/publications/publication/68/%D7%9E%D7%A0%D7%99%D7%A2%D7%94-%D7%A8%D7%90%D7%A9%D7%95%D7%A0%D7%99%D7%AA-%D7%A9%D7%9C-%D7%9E%D7%97%D7%9C%D7%95%D7%AA-%D7%9C%D7%91-%D7%95%D7%9B%D7%9C%D7%99-%D7%93%D7%9D-cardiovascular							11					Pager is there	
+																	clinical controlled trials and RCT	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2780					5						
+																	side effects 	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2779					1						
+																	Cardiocard	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2766					4						
+															Common dietary trends and their effect on the metabolic syndrome	https://inventingforlife.msd.co.il/publications/publication/97/%D7%9E%D7%92%D7%9E%D7%95%D7%AA-%D7%AA%D7%96%D7%95%D7%A0%D7%AA%D7%99%D7%95%D7%AA-%D7%A0%D7%A4%D7%95%D7%A6%D7%95%D7%AA-%D7%95%D7%94%D7%A9%D7%A4%D7%A2%D7%AA%D7%9F-%D7%A2%D7%9C-%D7%94%D7%A1%D7%99%D7%A0%D7%93%D7%A8%D7%95%D7%9D-%D7%94%D7%9E%D7%98%D7%91%D7%95%D7%9C%D7%99							12						
+																	LiftStyle - lifestyle	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2846					5						
+																	Type 2 diabetes	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2761					8						
+															TAF vs TDF - Is there a difference?	https://inventingforlife.msd.co.il/publications/publication/101/taf-vs-tdf-%E2%80%93-%D7%94%D7%90%D7%9D-%D7%99%D7%A9-%D7%94%D7%91%D7%93%D7%9C							12					Pager is there	
+																	AIDS	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2851					2						
+															Combination of Aztemib and Simvastatin The anti-inflammatory effect is evident after consumption of Atherosclerosis	https://inventingforlife.msd.co.il/publications/publication/49/%D7%9C%D7%A9%D7%99%D7%9C%D7%95%D7%91-%D7%A9%D7%9C-%D7%90%D7%96%D7%98%D7%9E%D7%99%D7%91-%D7%95%D7%A1%D7%99%D7%9E%D7%91%D7%A1%D7%98%D7%98%D7%99%D7%9F-%D7%90%D7%A4%D7%A7%D7%98-%D7%90%D7%A0%D7%98%D7%99-%D7%93%D7%9C%D7%A7%D7%AA%D7%99-%D7%A0%D7%99%D7%9B%D7%A8-%D7%9C							12					Pager is there	
+																	Sclerosis	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2810					1						
+																	Pcsk9	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2809					1						
+																	Cardiovascular disease	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2807					1						
+																	Lipids	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2743					2						
+													News pagination 2	https://inventingforlife.msd.co.il/publications?page=2															
+															The link between diabetes and pancreatic cancer and breast	https://inventingforlife.msd.co.il/publications/publication/84/%D7%94%D7%A7%D7%A9%D7%A8-%D7%91%D7%99%D7%9F-%D7%A1%D7%95%D7%9B%D7%A8%D7%AA-%D7%9C%D7%A1%D7%A8%D7%98%D7%9F-%D7%9C%D7%91%D7%9C%D7%91-%D7%95%D7%A9%D7%93							12						
+																	real world studies	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2847					4						
+																	controlled clinical trials RCT	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2780					5						
+																	metformin	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2772					1						
+																	Type 2 diabetes	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2761					8						
+															Treatment of type 2 diabetics using a smart phone based system	https://inventingforlife.msd.co.il/publications/publication/85/%D7%98%D7%99%D7%A4%D7%95%D7%9C-%D7%91%D7%97%D7%95%D7%9C%D7%99-%D7%A1%D7%95%D7%9B%D7%A8%D7%AA-%D7%9E%D7%A1%D7%95%D7%92-2-%D7%91%D7%90%D7%9E%D7%A6%D7%A2%D7%95%D7%AA-%D7%9E%D7%A2%D7%A8%D7%9B%D7%AA-%D7%9E%D7%91%D7%95%D7%A1%D7%A1%D7%AA-%D7%98%D7%9C%D7%A4%D7%95							12						
+																	real world studies	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2847					8						
+																	LiftStyle - lifestyle	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2846					5						
+																	adherence to treatment	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2786					2						
+																	HbA1c HbA1c	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2767					1						
+																	Type 2 diabetes	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2761					8						
+															Accidental morbidity characteristics among HIV-positive people over the age of 50 - recent publication	https://inventingforlife.msd.co.il/publications/publication/74/%D7%9E%D7%90%D7%A4%D7%99%D7%99%D7%A0%D7%99-%D7%94%D7%AA%D7%97%D7%9C%D7%95%D7%90%D7%94-%D7%94%D7%A0%D7%9C%D7%95%D7%95%D7%99%D7%AA-%D7%91%D7%A7%D7%A8%D7%91-%D7%A0%D7%A9%D7%90%D7%99-hiv-%D7%9E%D7%A2%D7%9C-%D7%92%D7%99%D7%9C-50-%E2%80%93							12		1 link				
+																	HIV	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2852					1						
+																	HIV AIDS	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2851					2						
+																	comorbid morbidity Comorbidity	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2850					1						
+																	cardiosclerosis	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2766					4						
+																	Lipids	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2743					2						
+															Diabetes and oral health	https://inventingforlife.msd.co.il/publications/publication/82/%D7%A1%D7%95%D7%9B%D7%A8%D7%AA-%D7%95%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA-%D7%94%D7%A4%D7%94							12						
+																	type 2 diabetes	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2761					8						
+															Diabetes and osteoporosis	https://inventingforlife.msd.co.il/publications/publication/83/%D7%A1%D7%95%D7%9B%D7%A8%D7%AA-%D7%95%D7%90%D7%95%D7%A1%D7%98%D7%90%D7%95%D7%A4%D7%95%D7%A8%D7%95%D7%96%D7%99%D7%A1							12						
+																	real world studies	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2847					4						
+																	LiftStyle - lifestyle	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2846					5						
+																	controlled clinical trials RCT	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2780					5						
+																	safety	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2769					3						
+																	Type 2 diabetes	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2761					8						
+													News pagination 3	https://inventingforlife.msd.co.il/publications?page=3															
+															Dipeptidyl peptidase-4 (DPP-4) inhibitors improve wound healing in diabetic patients in a direct and indirect mechanism of transition of epithelial cells into mesenchymal cells and reduce scarring	https://inventingforlife.msd.co.il/publications/publication/66/%D7%9E%D7%A2%D7%9B%D7%91%D7%99-dipeptidyl-peptidase%E2%80%914-dpp-4-%D7%9E%D7%A9%D7%A4%D7%A8%D7%99%D7%9D-%D7%94%D7%97%D7%9C%D7%9E%D7%AA							12						
+																	incretin	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2777					2						
+																	2 internal links	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2775					2						
+																	safety	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2769					3						
+																	Januet XR Genet	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2768					2						
+																	Januet Genoet	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2764					2						
+																	Januvia Genovia	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2763					2						
+																	sitagliptin	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2762					2						
+																	Type 2 diabetes	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2761					8						
+																	controlled clinical trials RCT	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2780					5						
+															Relationship between Drug Compliance and the Implications of Type 2 Diabetes: Metabolism	https://inventingforlife.msd.co.il/publications/publication/73/%D7%94%D7%A7%D7%A9%D7%A8-%D7%91%D7%99%D7%9F-%D7%94%D7%99%D7%A2%D7%A0%D7%95%D7%AA-%D7%9C%D7%98%D7%99%D7%A4%D7%95%D7%9C-%D7%AA%D7%A8%D7%95%D7%A4%D7%AA%D7%99-%D7%95%D7%94%D7%94%D7%A9%D7%9C%D7%9B%D7%95%D7%AA-%D7%A9%D7%9C-%D7%A1%D7%95%D7%9B%D7%A8%D7%AA-%D7%A1%D7%95							12						
+																	LiftStyle - lifestyle	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2846					5						
+																	adherence to treatment	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2786					2						
+																	controlled clinical trials RCT	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2780					5						
+																	Type 2 diabetes  	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2761					8						
+															Insights on the safety of the vaccine against human papillomavirus	https://inventingforlife.msd.co.il/publications/publication/58/%D7%AA%D7%95%D7%91%D7%A0%D7%95%D7%AA-%D7%A2%D7%9C-%D7%91%D7%98%D7%99%D7%97%D7%95%D7%AA-%D7%94%D7%97%D7%99%D7%A1%D7%95%D7%9F-%D7%9B%D7%A0%D7%92%D7%93-%D7%95%D7%99%D7%A8%D7%95%D7%A1-%D7%94%D7%A4%D7%A4%D7%99%D7%9C%D7%95%D7%9E%D7%94-%D7%94%D7%90%D7%A0%D7%95%D7%A9%D7%99							12	4					
+															challenge of therapeutic inertia in managing the treatment of type 2 diabetes patients	https://inventingforlife.msd.co.il/publications/publication/60/%D7%90%D7%AA%D7%92%D7%A8-%D7%94%D7%90%D7%99%D7%A0%D7%A8%D7%A6%D7%99%D7%94-%D7%94%D7%98%D7%99%D7%A4%D7%95%D7%9C%D7%99%D7%AA-%D7%91%D7%A0%D7%99%D7%94%D7%95%D7%9C-%D7%94%D7%98%D7%99%D7%A4%D7%95%D7%9C-%D7%91%D7%97%D7%95%D7%9C%D7%99-%D7%A1%D7%95%D7%9B%D7%A8%D7%AA-%D7%A1							12						
+																	Integrated therapy	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2771					1						
+															use of vitamins and minerals as dietary supplements for the prevention and treatment of cardiovascular disease (cardiovascular disease)	https://inventingforlife.msd.co.il/publications/publication/65/%D7%A9%D7%99%D7%9E%D7%95%D7%A9-%D7%91%D7%95%D7%95%D7%99%D7%98%D7%9E%D7%99%D7%A0%D7%99%D7%9D-%D7%95%D7%9E%D7%99%D7%A0%D7%A8%D7%9C%D7%99%D7%9D-%D7%9B%D7%AA%D7%95%D7%A1%D7%A4%D7%99-%D7%AA%D7%96%D7%95%D7%A0%D7%94-%D7%9C%D7%9E%D7%A0%D7%99%D7%A2%D7%94-%D7%95%D7%98%D7%99%D7%A4							12						
+																	LiftStyle - lifestyles	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2846					5						
+																	Cardiovascular	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2766					4						
+													News pagination 4	https://inventingforlife.msd.co.il/publications?page=4															
+															Conservation of ovarian tissue and other methods for preserving fertility in women	https://inventingforlife.msd.co.il/publications/publication/32/%D7%A9%D7%99%D7%9E%D7%95%D7%A8-%D7%A8%D7%A7%D7%9E%D7%AA-%D7%A9%D7%97%D7%9C%D7%94-%D7%95%D7%94%D7%A9%D7%99%D7%98%D7%95%D7%AA-%D7%94%D7%A0%D7%95%D7%A1%D7%A4%D7%95%D7%AA-%D7%9C%D7%A9%D7%99%D7%9E%D7%95%D7%A8-%D7%A4%D7%95%D7%A8%D7%99%D7%95%D7%AA-%D7%91%D7%A0%D7%A9%D7%99							12	1					
+																	agonist	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2752					1						
+																	alonbe	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2751					1						
+																	Corifolitropin alfa 	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2750					1						
+																	gonadotropins - GnRH	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2749					1						
+																	pills	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2725					1						
+																	Poor ovarian response 	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2711					1						
+															Research has found: Deep muscle paralysis improves the conditions of bariatric surgery and reduces pain after it	https://inventingforlife.msd.co.il/publications/publication/46/%D7%9E%D7%97%D7%A7%D7%A8-%D7%9E%D7%A6%D7%90-%D7%A9%D7%99%D7%AA%D7%95%D7%A7-%D7%A9%D7%A8%D7%99%D7%A8-%D7%A2%D7%9E%D7%95%D7%A7-%D7%9E%D7%A9%D7%A4%D7%A8-%D7%90%D7%AA-%D7%AA%D7%A0%D7%90%D7%99-%D7%94%D7%A0%D7%99%D7%AA%D7%95%D7%97-%D7%94%D7%91%D7%A8%D7%99							9	1					
+																	Surgery Laparoscopic	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2838					1						
+																	Bariatric Surgery	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2837					1						
+																	Deep Neuromuscular Block	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2835					1						
+																	Surgical conditions	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2834					1						
+																	Postoperative Pain 	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2833					1						
+																	Bridion	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2832					2						
+																	NMB	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2840					2						
+																	MIS surgery	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2839					1						
+															breakthrough innovation	https://inventingforlife.msd.co.il/publications/publication/8/%D7%97%D7%93%D7%A9%D7%A0%D7%95%D7%AA-%D7%A4%D7%95%D7%A8%D7%A6%D7%AA-%D7%93%D7%A8%D7%9A													
+																	Kitroda Keytruda	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2714					1						
+																	Clinical Studies	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2708					1						
+																	Pembrolizumab	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2703					1						
+																	Immunotherapy	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2702					1						
+															Sexual enhancement in the sex drive following the replacement of oral contraceptives to pills containing 17 β estradiol	https://inventingforlife.msd.co.il/publications/publication/29/%D7%A9%D7%99%D7%A4%D7%95%D7%A8-%D7%91%D7%97%D7%A9%D7%A7-%D7%94%D7%9E%D7%99%D7%A0%D7%99-%D7%91%D7%A2%D7%A7%D7%91%D7%95%D7%AA-%D7%94%D7%97%D7%9C%D7%A4%D7%AA-%D7%92%D7%9C%D7%95%D7%9C%D7%95%D7%AA-%D7%9C%D7%9E%D7%A0%D7%99%D7%A2%D7%AA-%D7%94%D7%A8%D7%99%D7%95%D7%9F							12						
+															Table of Sensitivity to Antiviral Drugs Fifth Edition 2014	https://inventingforlife.msd.co.il/publications/publication/26/%D7%98%D7%91%D7%9C%D7%AA-%D7%A8%D7%92%D7%99%D7%A9%D7%95%D7%99%D7%95%D7%AA-%D7%9C%D7%AA%D7%A8%D7%95%D7%A4%D7%95%D7%AA-%D7%90%D7%A0%D7%98%D7%99-%D7%96%D7%99%D7%94%D7%95%D7%9E%D7%99%D7%95%D7%AA-%D7%9E%D7%94%D7%93%D7%95%D7%A8%D7%94-%D7%97%D7%9E%D7%99%D7%A9%D7%99%D7%AA							12		1 link				
+																	MRSA	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2805					1						
+																	Pesudomonas aeruginosa	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2804					1						
+																	Gram Negative Bactria	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2803					1						
+																	Gram Positive Bactria	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2802					1						
+																	ESBL	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2800					1						
+																	Anti-Microbial Stewardship	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2793					1						
+													News pagination 5	https://inventingforlife.msd.co.il/publications?page=5															
+															Inversion of muscle paralysis in adults: The treatment of Maxax is more effective and safer than the treatment of naestegamine	https://inventingforlife.msd.co.il/publications/publication/44/%D7%94%D7%99%D7%A4%D7%95%D7%9A-%D7%A9%D7%99%D7%AA%D7%95%D7%A7-%D7%A9%D7%A8%D7%99%D7%A8-%D7%91%D7%9E%D7%91%D7%95%D7%92%D7%A8%D7%99%D7%9D-%D7%94%D7%98%D7%99%D7%A4%D7%95%D7%9C-%D7%91%D7%A1%D7%95%D7%92%D7%9E%D7%93%D7%A7%D7%A1-%D7%99%D7%A2%D7%99%D7%9C-%D7%95%D7%91							9	1					
+																	NMB	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2840					2						
+																	Bridion	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2832					2						
+																	neostigmine side effect	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=4&tag=2830					1						
+											Blog Experts	https://inventingforlife.msd.co.il/experts-blog											3						
+													News pagination 1	https://inventingforlife.msd.co.il/experts-blog?page=1															
+															Good one of the two	https://inventingforlife.msd.co.il/experts-blog/blog/14/%D7%98%D7%95%D7%91-%D7%94%D7%90%D7%97%D7%93-%D7%9E%D7%9F-%D7%94%D7%A9%D7%A0%D7%99%D7%99%D7%9D							11	1				Pager is there.  1 video link is there	
+																	Sclerosis	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2810					3						
+																	Pcsk9	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2809					3						
+																	Cardiovascular disease	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2807					3						
+																	Lipids	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2743					3						
+															Lowering low-density lipoprotein (LDL-C) and reducing cardiovascular disease (cardiac and cerebral infarction)	https://inventingforlife.msd.co.il/experts-blog/blog/47/%D7%94%D7%95%D7%A8%D7%93%D7%AA-%D7%9C%D7%99%D7%A4%D7%95%D7%A4%D7%A8%D7%95%D7%98%D7%90%D7%99%D7%9F-%D7%91%D7%A6%D7%A4%D7%99%D7%A4%D7%95%D7%AA-%D7%A0%D7%9E%D7%95%D7%9B%D7%94-ldl-c-%D7%95%D7%94%D7%A4%D7%97%D7%AA%D7%AA-%D7%AA							11					Pager is there	
+																	Sclerosis	Links already there											
+																	Pcsk9	Links already there											
+																	Cardiovascular disease	Links already there											
+																	Lipids	Links already there											
+															Optimization of surgical conditions with deep nerve-muscle barrier - Laparoscopic gastric bypass	https://inventingforlife.msd.co.il/experts-blog/blog/99/%D7%90%D7%95%D7%A4%D7%98%D7%99%D7%9E%D7%99%D7%96%D7%A6%D7%99%D7%94-%D7%A9%D7%9C-%D7%94%D7%AA%D7%A0%D7%90%D7%99%D7%9D-%D7%94%D7%9B%D7%99%D7%A8%D7%95%D7%A8%D7%92%D7%99%D7%99%D7%9D-%D7%A2%D7%9D-%D7%97%D7%A1%D7%9D-%D7%A2%D7%A6%D7%91-%D7%A9%D7%A8%D7%99%D7%A8-%D7%A2							9	1				1 video link, Pager is there. For Russian subtitles click here(that link show in empty)	
+																	NMB	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2840					1						
+																	Bariatric Surgery	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2837					1						
+																	Deep Neuromuscular Block	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2835					1						
+																	Surgical conditions	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2834					1						
+																	Postoperative Pain	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2833					1						
+																	Bridion	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2832					1						
+															5 Important points for clarification in a diabetic patient complaining of sexual dysfunction	https://inventingforlife.msd.co.il/experts-blog/blog/104/5-%D7%93%D7%92%D7%A9%D7%99%D7%9D-%D7%97%D7%A9%D7%95%D7%91%D7%99%D7%9D-%D7%9C%D7%91%D7%99%D7%A8%D7%95%D7%A8-%D7%90%D7%A6%D7%9C-%D7%9E%D7%98%D7%95%D7%A4%D7%9C-%D7%A1%D7%95%D7%9B%D7%A8%D7%AA%D7%99-%D7%94%D7%9E%D7%AA%D7%9C%D7%95%D7%A0%D7%9F-%D7%A2%D7%9C							12	1				Pager is there.  1 video link is there	
+																	LiftStyle - lifestyles	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2846					7						
+																	side effects	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2779					8						
+																	glycemic control	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2770					10						
+																	safety	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2769					9						
+																	hemoglobin HbA1c Msocrr-	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2767					11						
+																	Type 2 diabetes	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2761					14						
+															A decade to treat diabetes using DPP4 inhibitors	https://inventingforlife.msd.co.il/experts-blog/blog/37/%D7%A2%D7%A9%D7%95%D7%A8-%D7%9C%D7%98%D7%99%D7%A4%D7%95%D7%9C-%D7%91%D7%A1%D7%95%D7%9B%D7%A8%D7%AA-%D7%91%D7%90%D7%9E%D7%A6%D7%A2%D7%95%D7%AA-%D7%9E%D7%A2%D7%9B%D7%91%D7%99-dpp4							11	1				Pager is there.  1 video link is there	
+																	cardiovascular	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2766					6						
+																	kidney 	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2765					6						
+																	G'noat Januet 	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2764					6						
+																	G'noat Januet	Links already there					6						
+																	sitagliptin Januvia	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2763					6						
+																	sitagliptin	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2762					6						
+																	Type 2 diabetes	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2761					14						
+																	hypoglycemia	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2773					6						
+																	metformin	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2772					5						
+																	combination therapy 	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2771					5						
+																	glycemic control	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2770					10						
+																	safety	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2769					9						
+																	G'noat XR Januet	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2768					6						
+																	hemoglobin HbA1c Msocrr-	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2767					11						
+																	side effects	Links already there					8						
+																	incretins	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2777					4						
+																	SGLT2 inhibitors	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2776					5						
+																	DPP4 inhibitors	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2775					5						
+																	Solfnilaoriah SU	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2774					4						
+																													
+													News pagination 2	https://inventingforlife.msd.co.il/experts-blog?page=2															
+															Research CompoSIT-R	https://inventingforlife.msd.co.il/experts-blog/blog/96/%D7%9E%D7%97%D7%A7%D7%A8-%D7%94-composit-r							12	2				1 video link is there	
+																	G'noat XR Januet	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2768					6						
+																	hemoglobin HbA1c Msocrr-	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2767					11						
+																	kidney	Links already there					6						
+																	G'noat Januet	Links already there					6						
+																	sitagliptin Januvia	Links already there					6						
+																	sitagliptin	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2762					6						
+																	Type 2 diabetes	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2761					14						
+																	controlled trials RCT trials	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2780					6						
+																	inhibitors of SGLT2	Links already there					5						
+																	inhibitors of DPP4	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2775					5						
+																	combination therapy	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2771					5						
+																	safety	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2769					9						
+															How to live well with diabetes	https://inventingforlife.msd.co.il/experts-blog/blog/98/%D7%90%D7%99%D7%9A-%D7%9C%D7%97%D7%99%D7%95%D7%AA-%D7%98%D7%95%D7%91-%D7%A2%D7%9D-%D7%94%D7%A1%D7%95%D7%9B%D7%A8%D7%AA							12					Pager is there	
+															positive psychology	https://inventingforlife.msd.co.il/experts-blog/blog/88/%D7%A4%D7%A1%D7%99%D7%9B%D7%95%D7%9C%D7%95%D7%92%D7%99%D7%94-%D7%97%D7%99%D7%95%D7%91%D7%99%D7%AA-%D7%9B%D7%9B%D7%9C%D7%99-%D7%9C%D7%94%D7%AA%D7%9E%D7%95%D7%93%D7%93%D7%95%D7%AA-%D7%A2%D7%9D-%D7%A9%D7%97%D7%99%D7%A7%D7%94-%D7%9E%D7%A7%D7%A6%D7%95%D7%A2%D7%99%D7%AA							12	1				Pager is there	
+																	Type 2 diabetes	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2847					3						
+																	LiftStyle - lifestyle	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2846					7						
+																	real world studies	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2761					14						
+															International Human Papillomavirus Awareness Week	https://inventingforlife.msd.co.il/experts-blog/blog/89/%D7%A9%D7%91%D7%95%D7%A2-%D7%94%D7%9E%D7%95%D7%93%D7%A2%D7%95%D7%AA-%D7%94%D7%91%D7%99%D7%A0%D7%9C%D7%90%D7%95%D7%9E%D7%99-%D7%9C%D7%95%D7%95%D7%99%D7%A8%D7%95%D7%A1-%D7%94%D7%A4%D7%A4%D7%99%D7%9C%D7%95%D7%9E%D7%94-%D7%94%D7%90%D7%A0%D7%95%D7%A9%D7%99							12					Pager is there, only video control like there. clicking time showing % of style	
+															are starting to move - physical activity for older age	https://inventingforlife.msd.co.il/experts-blog/blog/91/%D7%9E%D7%AA%D7%97%D7%99%D7%9C%D7%99%D7%9D-%D7%9C%D7%96%D7%95%D7%96-%E2%80%93-%D7%A4%D7%A2%D7%99%D7%9C%D7%95%D7%AA-%D7%92%D7%95%D7%A4%D7%A0%D7%99%D7%AA-%D7%9C%D7%92%D7%99%D7%9C-%D7%94%D7%9E%D7%91%D7%95%D7%92%D7%A8							12						
+																	studies "the real world" real world	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2847					3						
+																	LiftStyle - lifestyle	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2846					7						
+													News pagination 3	https://inventingforlife.msd.co.il/experts-blog?page=3															
+															emphasizes the determination of the HbA1c target in the adult patient	https://inventingforlife.msd.co.il/experts-blog/blog/80/%D7%93%D7%92%D7%A9%D7%99%D7%9D-%D7%9C%D7%A7%D7%91%D7%99%D7%A2%D7%AA-%D7%99%D7%A2%D7%93-hba1c-%D7%90%D7%A6%D7%9C-%D7%94%D7%97%D7%95%D7%9C%D7%94-%D7%94%D7%9E%D7%91%D7%95%D7%92%D7%A8							13	1				1 video link is there	
+																	side effects	Links already there					8						
+																	hypoglycemia	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2773					6						
+																	glycemic control	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2770					10						
+																	safety	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2769					9						
+																	HbA1c HgA1c	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2767					11						
+															Dr. Liat Barzilay answers to frequently asked questions of family physicians	https://inventingforlife.msd.co.il/experts-blog/blog/86/%D7%93%D7%A8-%D7%9C%D7%99%D7%90%D7%AA-%D7%91%D7%A8%D7%96%D7%99%D7%9C%D7%99-%D7%A2%D7%95%D7%A0%D7%94-%D7%9C%D7%A9%D7%90%D7%9C%D7%95%D7%AA-%D7%A0%D7%A4%D7%95%D7%A6%D7%95%D7%AA-%D7%A9%D7%9C-%D7%A8%D7%95%D7%A4%D7%90%D7%99-%D7%94%D7%9E%D7%A9%D7%A4%D7%97							12	5				5 video link is there	
+																	LiftStyle - lifestyles	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2846					7						
+																	side effects	Links already there					8						
+																	glycemic control	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2770					10						
+																	safety	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2769					9						
+																	hemoglobin HbA1c Msocrr-	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2767					11						
+																	Type 2 diabetes	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2761					14						
+															tools to improve drug compliance	https://inventingforlife.msd.co.il/experts-blog/blog/76/%D7%9B%D7%9C%D7%99%D7%9D-%D7%9C%D7%A9%D7%99%D7%A4%D7%95%D7%A8-%D7%94%D7%99%D7%A2%D7%A0%D7%95%D7%AA-%D7%9C%D7%98%D7%99%D7%A4%D7%95%D7%9C-%D7%AA%D7%A8%D7%95%D7%A4%D7%AA%D7%99							12						
+																	Type 2 diabetes	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2761					3						
+																	real world studies	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2847					7						
+																	LiftStyle - lifestyle	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2846					4						
+																	adherence to treatment	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2786					6						
+																	controlled clinical trials RCT	Links already there					14						
+															Improve Response to Treatment - "Talking About It"	https://inventingforlife.msd.co.il/experts-blog/blog/77/%D7%A9%D7%99%D7%A4%D7%95%D7%A8-%D7%94%D7%99%D7%A2%D7%A0%D7%95%D7%AA-%D7%9C%D7%98%D7%99%D7%A4%D7%95%D7%9C-%D7%9E%D7%93%D7%91%D7%A8%D7%99%D7%9D-%D7%A2%D7%9C-%D7%96%D7%94							12						
+																	Type 2 diabetes	Links already there											
+																	LiftStyle - lifestyle	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2786					4						
+																	adherence to treatment	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2761											
+															Risk factors in the elderly patient as a consideration for choosing diabetes treatment	https://inventingforlife.msd.co.il/experts-blog/blog/79/%D7%92%D7%95%D7%A8%D7%9E%D7%99-%D7%A1%D7%99%D7%9B%D7%95%D7%9F-%D7%90%D7%A6%D7%9C-%D7%94%D7%97%D7%95%D7%9C%D7%94-%D7%94%D7%9E%D7%91%D7%95%D7%92%D7%A8-%D7%9B%D7%A9%D7%99%D7%A7%D7%95%D7%9C-%D7%9C%D7%91%D7%97%D7%99%D7%A8%D7%AA-%D7%98%D7%99%D7%A4%D7%95%D7%9C-%D7%91							13	1				1 video link is there	
+																	side effects	Links already there											
+																	hypoglycemia	Links already there											
+																	glycemic control	Links already there											
+																	safety	Links already there											
+																	HbA1c HgA1c	Links already there											
+													News pagination 4	https://inventingforlife.msd.co.il/experts-blog?page=4															
+															The "neglected" part of the HIV glacier: Reducing the risk of cardiovascular disease in people living with the HIV virus	https://inventingforlife.msd.co.il/experts-blog/blog/94/%D7%94%D7%97%D7%9C%D7%A7-%D7%94%D7%9E%D7%95%D7%96%D7%A0%D7%97-%D7%A9%D7%9C-%D7%A7%D7%A8%D7%97%D7%95%D7%9F-%D7%94-hiv-%D7%94%D7%A7%D7%98%D7%A0%D7%AA-%D7%94%D7%A1%D7%99%D7%9B%D7%95%D7%9F-%D7%9C%D7%9E%D7%97%D7%9C%D7%AA-%D7%9C							14						
+																	HIV	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2852					3						
+																	HIV AIDS	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2851					3						
+																	Comorbid morbidity Comorbidity	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2850					3						
+															The therapeutic landscape against HIV: treatment "sewn" to measure in the face of uniform treatment	https://inventingforlife.msd.co.il/experts-blog/blog/95/%D7%94%D7%A0%D7%95%D7%A3-%D7%94%D7%98%D7%99%D7%A4%D7%95%D7%9C%D7%99-%D7%9B%D7%A0%D7%92%D7%93-hiv-%D7%98%D7%99%D7%A4%D7%95%D7%9C-%D7%94%D7%AA%D7%A4%D7%95%D7%A8-%D7%A2%D7%9C-%D7%A4%D7%99-%D7%9E%D7%99%D7%93%D7%94-%D7%90%D7%9C							14						
+																	HIV	Links already there											
+																	HIV AIDS	Links already there											
+																	Comorbid morbidity Comorbidity	Links already there											
+															link the diabetes and thyroid	https://inventingforlife.msd.co.il/experts-blog/blog/71/%D7%94%D7%A7%D7%A9%D7%A8-%D7%91%D7%99%D7%9F-%D7%A1%D7%95%D7%9B%D7%A8%D7%AA-%D7%95%D7%91%D7%9C%D7%95%D7%98%D7%AA-%D7%94%D7%AA%D7%A8%D7%99%D7%A1							12						
+																	controlled trials RCT trials	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2780					6						
+																	metformin	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2772					5						
+																	glycemic control	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2770					10						
+																	hemoglobin Msocrr- HbA1c	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2767					11						
+																	Type 2 diabetes	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2761					14						
+															diabetes, exercise and nutrition	https://inventingforlife.msd.co.il/experts-blog/blog/72/%D7%A1%D7%95%D7%9B%D7%A8%D7%AA-%D7%A4%D7%A2%D7%99%D7%9C%D7%95%D7%AA-%D7%92%D7%95%D7%A4%D7%A0%D7%99%D7%AA-%D7%95%D7%AA%D7%96%D7%95%D7%A0%D7%94							12						
+																	LiftStyle - lifestyle	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2846					7						
+																	glycemic balance	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2770					10						
+																	cardiosclerosis	Links already there					6						
+																	Type 2 diabetes	https://inventingforlife.msd.co.il/search?mode=articles&keyword=&category=2657&tag=2761					14						
+															Women who are living with the HIV virus: The impact of new information on the current clinical approach	https://inventingforlife.msd.co.il/experts-blog/blog/93/%D7%A0%D7%A9%D7%99%D7%9D-%D7%90%D7%A9%D7%A8-%D7%97%D7%99%D7%95%D7%AA-%D7%A2%D7%9D-%D7%A0%D7%92%D7%99%D7%A3-%D7%94-hiv-%D7%94%D7%A9%D7%A4%D7%A2%D7%AA-%D7%9E%D7%99%D7%93%D7%A2-%D7%97%D7%93%D7%A9-%D7%A2%D7%9C-%D7%94%D7%92%D7%99							14						
+																	HIV	Links already there											
+																	HIV AIDS	Links already there											
+																	Comorbid morbidity Comorbidity	Links already there											
+													News pagination 5	https://inventingforlife.msd.co.il/experts-blog?page=5															
+															treat type 2 diabetes in practice	https://inventingforlife.msd.co.il/experts-blog/blog/53/%D7%94%D7%98%D7%99%D7%A4%D7%95%D7%9C-%D7%91%D7%A1%D7%95%D7%9B%D7%A8%D7%AA-%D7%9E%D7%A1%D7%95%D7%92-2-%D7%94%D7%9C%D7%9B%D7%94-%D7%9C%D7%9E%D7%A2%D7%A9%D7%94							12	1				1 video link is there	
+																	hemoglobin HbA1c Msocrr-	Links already there											
+																	cardiovascular	Links already there											
+																	kidney	Links already there											
+																	G'noat Januet 	Links already there											
+																	sitagliptin Januvia	Links already there											
+																	sitagliptin	Links already there											
+																	Type 2 diabetes	Links already there											
+																	Solfnilaoriah SU	Links already there											
+																	hypoglycemia 	Links already there											
+																	metformin	Links already there											
+																	combination therapy	Links already there											
+																	glycemic control 	Links already there											
+																	safety	Links already there											
+																	G'noat XR Januet	Links already there											
+																	adherence to treatment	Links already there											
+																	controlled clinical trials and RCT	Links already there											
+																	side effects 	Links already there											
+																	incretins	Links already there											
+																	inhibitors SGLT2	Links already there											
+																	inhibitors of DPP4	Links already there											
+															All you need to know about bladder cancer	https://inventingforlife.msd.co.il/experts-blog/blog/61/%D7%9B%D7%9C-%D7%9E%D7%94-%D7%A9%D7%90%D7%AA%D7%9D-%D7%A6%D7%A8%D7%99%D7%9B%D7%99%D7%9D-%D7%9C%D7%93%D7%A2%D7%AA-%D7%A2%D7%9C-%D7%A1%D7%A8%D7%98%D7%9F-%D7%A9%D7%9C%D7%A4%D7%95%D7%97%D7%99%D7%AA-%D7%94%D7%A9%D7%AA%D7%9F													
+																													
+																													
